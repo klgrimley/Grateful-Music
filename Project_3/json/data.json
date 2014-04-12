@@ -1,0 +1,99 @@
+{
+	"albums": [
+		{
+			"title": "American Beauty",
+			"artist": "Grateful Dead",
+			"date": "1972",
+			"tracks": [
+				"Box of Rain",
+				"Friend of the Devil",
+				"Sugar Magnolia",
+				"Operator",
+				"Candyman",
+				"Ripple",
+				"Brokedown Palace",
+				"Till the Morning Comes",
+				"Attics of My Life",
+				"Truckin"
+			]
+		}
+		{
+			"title": "Workingman's Dead",
+			"artist": "Grateful Dead",
+			"date": "1976",
+			"tracks": [
+				"Uncle John's Band",
+				"High Time",
+				"Dire Wolf",
+				"New Speedway Boogie",
+				"Cumberland Blues",
+				"Black Peter",
+				"Easy Wind",
+				"Casey Jones"
+			]
+		}
+		{
+			"title": "Rage Aganist the Machine",
+			"artist": "Rage Aganist the Machine",
+			"date": "1991",
+			"tracks": [
+				"Bombtrack",
+				"Killing in the Name Of",
+				"Take the Power Back",
+				"Settle For Nothing",
+				"Bullet in the Head",
+				"Know Your Enemy",
+				"Wake Up",
+				"Fistful of Steel",
+				"Township Rebellion",
+				"Freedom"
+			]
+		}
+		{
+			"title": "Flood",
+			"artist": "They Might Be Giants",
+			"date": "1992",
+			"tracks": [
+				"Theme From Flood",
+				"Birdhouse in Your Soul",
+				"Lucky Ball and Chain",
+				"Istanbul Not Constantinople",
+				"Dead",
+				"Your Racist Friend",
+				"Particle Man",
+				"Twisting",
+				"We Want A Rock",
+				"Someone Keeps Moving My Chair",
+				"Hearing Aid",
+				"Minimum Wage",
+				"Letterbox",
+				"Whistling in the Dark",
+				"Hot Cha",
+				"Women and Men",
+				"Sapphire Bullets of Pure Love",
+				"They Might Be Giants",
+				"Road Movie to Berlin"
+			]
+		}
+		{
+			"title": "The Else",
+			"artist": "They Might Be Giants",
+			"year": "2007",
+			"tracks": [
+				"I'm Impressed",
+				"Take Out the Trash",
+				"Upside Down Frown",
+				"Climbing the Walls",
+				"Careful What You Pack",
+				"The Cap'm",
+				"With the Dark",
+				"The Shadow Government",
+				"Bee the Bird of the Moth",
+				"Withered Hope",
+				"Contrecoup",
+				"Feigh Amnesia",
+				"The Mesopotamians"
+			]
+		}
+	]
+}
