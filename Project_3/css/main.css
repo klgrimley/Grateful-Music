@@ -1,0 +1,64 @@
+body{
+	background: #F9F9F9;
+	color:#FFFFFF;
+}
+
+
+#title{
+	height:100px;
+	width:250px;
+	margin: 0 auto;
+}
+
+#nav{
+	width:100%;
+	height:30%;
+	position:relative;
+	margin-left:25px;
+	background:#000000;
+	border-radius: 8px;
+
+}
+li.main{
+	display:inline;
+	width: 20%;
+	margin-right: 50px;
+	background:#F00333;
+	border: 1px solid white;
+	padding:10px;
+}
+#nav ul li:hover{
+	background: #3330FF;
+}
+
+#nav ul ul {
+	display: none;
+}
+
+#nav ul li:hover > ul {
+		display: block;
+		visibility: visible;
+	}
+
+#player{
+	height:30%;
+	width:45%;
+	background:#339933;
+	position:relative;
+	margin-left:25px;
+	border-radius:8px;
+}
+
+#content{
+	width:45%;
+	height:100%;
+	overflow: auto;
+	float:right;
+	background:#000000;
+	border-radius:7px;
+	opacity:.8;
+	padding:20px;
+	position:relative;
+	margin-right: 25px;
+}
+
