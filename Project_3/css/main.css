@@ -1,5 +1,5 @@
 body{
-	background: #F9F9F9;
+	background: #aaaaaa;
 	color:#FFFFFF;
 }
 
@@ -12,11 +12,11 @@ body{
 
 #nav{
 	width:100%;
-	height:30%;
+	height:15%;
 	position:relative;
-	margin-left:25px;
+	
 	background:#000000;
-	border-radius: 8px;
+
 
 }
 li.main{
@@ -26,6 +26,10 @@ li.main{
 	background:#F00333;
 	border: 1px solid white;
 	padding:10px;
+}
+
+#nav ul {
+	margin-left: 100px;
 }
 #nav ul li:hover{
 	background: #3330FF;
@@ -40,25 +44,32 @@ li.main{
 		visibility: visible;
 	}
 
+.content_wrapper {
+	width:80%;
+	margin: -20px auto;
+	background: #eeeeee;
+}
+
 #player{
 	height:30%;
 	width:45%;
-	background:#339933;
+	margin: 0;
 	position:relative;
 	margin-left:25px;
-	border-radius:8px;
 }
 
 #content{
 	width:45%;
 	height:100%;
+	margin: 0;
 	overflow: auto;
-	float:right;
+	display: inline;
 	background:#000000;
-	border-radius:7px;
-	opacity:.8;
-	padding:20px;
 	position:relative;
 	margin-right: 25px;
+}
+
+#tracks {
+	margin: 0;
 }
 
