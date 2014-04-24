@@ -1,21 +1,13 @@
 body{
-	background: #AAAAAA;
+<<<<<<< HEAD
+	background: #F9F9F9;
+=======
+	background: #aaaaaa;
+>>>>>>> f1972480a54f020eba5f85a84dc08f00557855bf
 	color:#FFFFFF;
 }
-img{
-	width:80px;
-	height:70px;
-}
 
-#container{
-	overflow:auto;
-	height:100%;
-	width:100%;
-	padding:10px;
-	background:#000000;
-	border-radius:10px;
-	margin:0 auto;
-}
+
 #title{
 	height:100px;
 	width:250px;
@@ -24,45 +16,102 @@ img{
 
 #nav{
 	width:100%;
-	height:5%;
+<<<<<<< HEAD
+	height:30%;
+	position:relative;
+	margin-left:25px;
 	background:#000000;
 	border-radius: 8px;
 
 }
-.sub{
-	display:hidden;
-}
 #nav ul li{
-	width:30%;
 	display:inline;
+	background:#F00333;
+	border: 1px solid white;
+	padding:10px;
+	position:relative;
+=======
+	height:15%;
+	position:relative;
+	
+	background:#000000;
+
+
+}
+li.main{
+	display:inline;
+	width: 20%;
+	margin-right: 50px;
 	background:#F00333;
 	border: 1px solid white;
 	padding:10px;
 }
 
+#nav ul {
+	margin-left: 100px;
+>>>>>>> f1972480a54f020eba5f85a84dc08f00557855bf
+}
 #nav ul li:hover{
 	background: #3330FF;
+}
+
+<<<<<<< HEAD
+#player{
+	height:30%;
+	width:45%;
+	background:#339933;
+	position:relative;
+	margin-left:25px;
+	border-radius:8px;
+=======
+#nav ul ul {
+	display: none;
+}
+
+#nav ul li:hover > ul {
+		display: block;
+		visibility: visible;
+	}
+
+.content_wrapper {
+	width:80%;
+	margin: -20px auto;
+	background: #eeeeee;
 }
 
 #player{
 	height:30%;
 	width:45%;
-	background:#00FF00;
-	margin:0;
-	border-radius:8px;
-}
-#tracks{
-	height:100px;
-	width: 45%;
-	margin:0;
-	background:#FF0000;
+	margin: 0;
+	position:relative;
+	margin-left:25px;
+>>>>>>> f1972480a54f020eba5f85a84dc08f00557855bf
 }
 
 #content{
 	width:45%;
 	height:100%;
+<<<<<<< HEAD
 	overflow: auto;
 	float:right;
-	background:#FFFF00;
+	background:#000000;
 	border-radius:7px;
+	opacity:.8;
+	padding:20px;
+	position:relative;
+	margin-right: 25px;
 }
+=======
+	margin: 0;
+	overflow: auto;
+	display: inline;
+	background:#000000;
+	position:relative;
+	margin-right: 25px;
+}
+
+#tracks {
+	margin: 0;
+}
+
+>>>>>>> f1972480a54f020eba5f85a84dc08f00557855bf
