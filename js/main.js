@@ -1,8 +1,9 @@
 // JavaScript Document
 //runs javascript as soon as the page loads
-	var albums;
-	var albumInfoTemplate = Handlebars.compile($("#albumInfo").html());
 		$(document).ready(function(){
+			var albums;
+			var albumInfoTemplate = Handlebars.compile($("#albumInfo").html());
+			var albumLinkTemplate = Handlebars.compile($("#albumHomeLinks").html());
 			var contentDiv = $("#content");
 
 			//when sub is clicked exposes the list
@@ -11,6 +12,11 @@
 			});
 
 			$.getJSON('json/data.json', function(data) {
-				$("#content").append
+				albums = data.albums
+				$("#content").append(albumLinkTemplate(data));
 			});
+			$("#content").on("click", ".albumLink", function(){
+					console.log(albums[$(this).data('title')]);
+					var albumInfo = _.findWhere(albums, {id: $(this).data('id')})
+					albumInfoDiv.html(albumInfoTemplate(albumInfo));
 		});
