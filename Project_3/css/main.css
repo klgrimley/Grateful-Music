@@ -16,7 +16,7 @@ body{
 
 #nav{
 	width:100%;
-<<<<<<< HEAD
+
 	height:30%;
 	position:relative;
 	margin-left:25px;
@@ -30,7 +30,6 @@ body{
 	border: 1px solid white;
 	padding:10px;
 	position:relative;
-=======
 	height:15%;
 	position:relative;
 	
@@ -49,13 +48,11 @@ li.main{
 
 #nav ul {
 	margin-left: 100px;
->>>>>>> f1972480a54f020eba5f85a84dc08f00557855bf
 }
 #nav ul li:hover{
 	background: #3330FF;
 }
 
-<<<<<<< HEAD
 #player{
 	height:30%;
 	width:45%;
@@ -63,7 +60,8 @@ li.main{
 	position:relative;
 	margin-left:25px;
 	border-radius:8px;
-=======
+}
+
 #nav ul ul {
 	display: none;
 }
@@ -84,14 +82,12 @@ li.main{
 	width:45%;
 	margin: 0;
 	position:relative;
-	margin-left:25px;
->>>>>>> f1972480a54f020eba5f85a84dc08f00557855bf
+	margin-left:25px; 
 }
 
 #content{
 	width:45%;
 	height:100%;
-<<<<<<< HEAD
 	overflow: auto;
 	float:right;
 	background:#000000;
@@ -101,7 +97,8 @@ li.main{
 	position:relative;
 	margin-right: 25px;
 }
-=======
+
+#something {
 	margin: 0;
 	overflow: auto;
 	display: inline;
@@ -114,4 +111,4 @@ li.main{
 	margin: 0;
 }
 
->>>>>>> f1972480a54f020eba5f85a84dc08f00557855bf
+

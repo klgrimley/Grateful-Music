@@ -1,9 +1,13 @@
 {
 	"albums": [
 		{
+			"id": 1,
 			"title": "American Beauty",
 			"artist": "Grateful Dead",
-			"date": "1972",
+			"year": "1972",
+			"genre": "Psychedelia",
+			"image": "american_beauty.jpg",
+			"description": "The Grateful Dead was an American psychedelia-influenced rock band. Formed in 1965 in San Francisco from the remnants of another band, 'Mother McCree's Uptown Jug Champions,' the Grateful Dead were known for their unique and eclectic songwriting style-which fused elements of rock, folk music, bluegrass, blues, country, and jazz-and for live performances of long modal jams.",
 			"tracks": [
 				{"name": "Box of Rain", "audio": "../audio/grateful_dead/amercian_beauty/01.box_of_rain.mp3"},
 				{"name": "Friend of the Devil", "audio": "../audio/grateful_dead/amercian_beauty/02.friend_of_the_devil.mp3"},
@@ -18,9 +22,13 @@
 			]
 		},
 		{
+			"id": 2,
 			"title": "Workingman's Dead",
 			"artist": "Grateful Dead",
-			"date": "1976",
+			"year": "1976",
+			"genre": "Psychedelia",
+			"image": "workingmans_dead.jpg",
+			"description": "The Grateful Dead was an American psychedelia-influenced rock band. Formed in 1965 in San Francisco from the remnants of another band, 'Mother McCree's Uptown Jug Champions,' the Grateful Dead were known for their unique and eclectic songwriting style-which fused elements of rock, folk music, bluegrass, blues, country, and jazz-and for live performances of long modal jams.",
 			"tracks": [
 				{"name": "Uncle John's Band", "audio": "../audio/grateful_dead/workingmans_dead/01.uncle_johns_band.mp3"},
 				{"name": "High Time", "audio": "../audio/grateful_dead/workingmans_dead/02.high_time.mp3"},
@@ -33,9 +41,13 @@
 			]
 		},
 		{
+			"id":3,
 			"title": "Rage Aganist the Machine",
 			"artist": "Rage Aganist the Machine",
-			"date": "1991",
+			"year": "1991",
+			"genre": "Hard Rock",
+			"image": "rage.jpg",
+			"description": "Rage Against the Machine is an American rap metal band from Los Angeles, California. Formed in 1991, the group consists of vocalist Zack de la Rocha, bassist and backing vocalist Tim Commerford, guitarist Tom Morello and drummer Brad Wilk. They draw inspiration from early heavy metal instrumentation, as well as rap acts such as Afrika Bambaataa, Public Enemy, the Beastie Boys and Dutch crossover band Urban Dance Squad. Rage Against the Machine is best known for its leftist political views, which are expressed in many of its songs. As of 2010, they have sold over 16 million records worldwide.",
 			"tracks": [
 				{"name": "Bombtrack", "audio": "../audio/rage_aganist_the_machine/rage_aganist_the_machine/01.bombtrack.mp3"},
 				{"name": "Killing in the Name Of", "audio": "../audio/rage_aganist_the_machine/rage_aganist_the_machine/02.killing_in_the_name_of.mp3"},
@@ -50,9 +62,13 @@
 			]
 		},
 		{
+			"id": 4,
 			"title": "Flood",
 			"artist": "They Might Be Giants",
-			"date": "1992",
+			"year": "1992",
+			"genre": "Alternative Rock",
+			"image": "flood.jpg",
+			"description": "They Might Be Giants is an original band from Brooklyn, New York founded by John Flansburgh and John Linnell. TMBG writes, records and tours continuously, has been involved in numerous television and film projects. They have an on-going audio and sometimes video podcast that is free. They have won two Grammys. The Johns are frequently joined by Dan Miller on guitar, Danny Weinkauf on bass, and Marty Beller on drums.",
 			"tracks": [
 				{"name": "Theme From Flood", "audio": "../audio/they_might_be_giants/flood/01.theme_from_flood.mp3"},
 				{"name": "Birdhouse in Your Soul", "audio": "../audio/they_might_be_giants/flood/02.birdhouse_in_your_soul.mp3"},
@@ -76,9 +92,13 @@
 			]
 		},
 		{
+			"id": 5,
 			"title": "The Else",
 			"artist": "They Might Be Giants",
 			"year": "2007",
+			"genre": "Alternative Rock",
+			"image": "the_else.jpg",
+			"description": "They Might Be Giants is an original band from Brooklyn, New York founded by John Flansburgh and John Linnell. TMBG writes, records and tours continuously, has been involved in numerous television and film projects. They have an on-going audio and sometimes video podcast that is free. They have won two Grammys. The Johns are frequently joined by Dan Miller on guitar, Danny Weinkauf on bass, and Marty Beller on drums.",
 			"tracks": [
 				{"name": "I'm Impressed", "audio": "../audio/they_might_be_giants/the_else/01.im_impressed.mp3"},
 				{"name": "Take Out the Trash", "audio": "../audio/they_might_be_giants/the_else/02.take_out_the_trash.mp3"},
@@ -92,7 +112,7 @@
 				{"name": "Withered Hope", "audio": "../audio/they_might_be_giants/the_else/10.withered_hope.mp3"},
 				{"name": "Contrecoup", "audio": "../audio/they_might_be_giants/the_else/11.contrecoup.mp3"},
 				{"name": "Feigh Amnesia", "audio": "../audio/they_might_be_giants/the_else/12.feign_amnesia.mp3"},
-				{"name": "The Mesopotamians" "audio": "../audio/they_might_be_giants/the_else/13.the_mesopotamians.mp3"}
+				{"name": "The Mesopotamians", "audio": "../audio/they_might_be_giants/the_else/13.the_mesopotamians.mp3"}
 			]
 		}
 	]
