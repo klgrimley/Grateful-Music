@@ -3,25 +3,23 @@
 		<title>Grateful Music</title>
 
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
-		<link type="text/css" href="skin/blue.monday/jplayer.blue.monday.css" rel="stylesheet" />
-		<script src="js/jquery.min.js"></script>
-    <script src="js/main.js"></script> 
-    <script type="text/javascript" src="js/handlebars-v1.3.0.js"></script>
-    <script type="text/javascript" src="js/underscore-min.js"></script>   
-        
+		<script src="js/jquery-2.0.3.min.js"></script>
+        <script src="js/main.js" type="text/javascript"></script>
+		<script src="js/handlebars-v1.3.0.js"></script>
+   		<script src="js/underscore-min.js"></script>
+
 	</head>
 	<body>
-
+		
 			<div id="title">
 				<h1>Grateful Music</h1>
+				<image src="images/music.jpg" />
 			</div>
 			<div id="nav">
-				<ul>
+				<ul id="pages">
 					<li class="main" id="genre">Genres</li>
 						<ul class="sub" id="genres">
 							<li class="minor">80s</li>
-
-							<li class="minor">90s</li>
 						</ul>
 					<li class="main" id="artist">Artists</li>
 						<ul class="sub" id="artists">
@@ -33,116 +31,46 @@
 						</ul>
 				</ul>
 			</div>
-    <div class="content_wrapper">
-			<div id="browse"></div>
-      <div id="genre"></div>
-      <div id="info"></div>
-		</div>
-
-    <!-- home page list of albums template -->
-    <script id="albumHomeLinks" type="text/x-handlebars-template">
-      <ul class="album_list">
-      {{#each albums}}
-        <li class="albumLink" data-id="{{this.id}}">
-          {{this.title}}&nbsp
-          {{this.artist}}
-        </li>
-      {{/each}} 
-      </ul>
-    </script>
-
-    <!-- book info template -->
-    <script id="albumInfo" type="text/x-handlebars-template">
-      <div>
-        <div class="image">{{image}}</div>
-        <div class="albumTitle">{{title}}</div>
-        <div class="artist">{{artist}}</div>
-        <div class="releaseDate">{{year}}</div>
-        <div class="genre">{{genre}}</div>
-        <div class="artistDescription">{{description}}</div>
-      </div>
-    </script>
-
-    <!-- page script -->
-    <script>
-    var albums;
-
-      $(document).ready(function(){
-
-        //cached DOM references
-        var infoDiv = $("#browse");
-        var browseDiv = $("#info");
-        var genreDiv = $("#genres");
 
 
-        //templates
-        
-        var albumLinkTemplate = Handlebars.compile($("#albumHomeLinks").html());
-        var hompageTemplate = Handlebars.compile($("#albumInfo").html());
-        //var bookInfoTemplate = Handlebars.compile($("#bookInfo").html());
-        var genreLinkTemplate = Handlebars.compile($("#genreLinks").html());
-      
-        $.getJSON('json/data.json', function(data) {
-          albums = data.albums;
-          $("#content").append(albumLinkTemplate(data));
-          genreDiv.html(genreLinkTemplate(data.genres));
-        })
-        
+		<div id="container">
+			<div id="content">
+				<div id="info"></div>
 
-        //Run this function whenever a element with class 'bookLink' is clicked if its in the content div, works for any now or in the future
-        $("#content").on("click", ".bookLink", function() {
-          console.log(books[$(this).data('id')]);
+		<script id="albumHomeLinks" type="text/x-handlebars-template">
+//Template to make albums links	
+			<ul class="album_list">
+				{{#each albums}}
+					<li class='albumLink' data-id="{{this.id}}">
+						{{this.title}} - {{this.artist}}
+					</li>
+				{{/each}}
+			</ul>
+		</script>
 
 
-          //get the data
-          var bookInfo = _.findWhere(books, {id: $(this).data('id') });
-          //generate html
-          infoDiv.html(bookInfoTemplate( bookInfo ) );
-        })
+		<script id="albumInfo" type="text/x-handlebars-template">
+//Template to display album info
+			<div>
+				<div class="albumTitle">{{title}}</div>
+				<div class="albumArtist">{{artist}}</div>
+				<div class="albumDate">{{date}}</div>
+			</div>
+		</script>
 
-        $("#content").on("click", ".genreLink", function() {
-          var genreToFind = $(this).html();
-          var results = {};
 
-          results.books = _.where(books, { genre: genreToFind });
+			</div>
+			
+			<div id="player">
+				<h1>Play that funky music</h1>
+				<audio preload="auto" tabindex="0" autoplay="true" loop="true">
+			
+				</audio>
+			</div>
 
-          browseDiv.html(bookLinkTemplate(results));
-        })
-
-        $("#btnSearch").click(function() {
-          //get the search term
-          var searchTerm = $("#txtSearch").val();
-          //object to store any results
-          var results = {
-            books: []
-          }
-
-          //loop through all of our books
-          results.books = _.filter(books, function(item) {
-            //return (item.title.indexOf(searchTerm) != -1);
-            var titleSplit = item.title.split(" ");
-            return _.find(titleSplit, function(titleWord){
-              return titleWord.toUpperCase() == searchTerm.toUpperCase();
-            })
-          })
-          /*for(var i = 0; i < books.length; i++) {
-            //split the book's name into individual words
-            var titleSplit = books[i].title.split(" ");
-
-            //loop through those words
-            for(var y = 0; y < titleSplit.length; y++) {
-              if(titleSplit[y].toUpperCase() == searchTerm.toUpperCase()) {
-                results.books.push(books[i]);
-                break;
-              }
-            }
-          }*/
-
-          browseDiv.html(bookLinkTemplate(results));
-
-        })
-      })
-    </script>
-						
+			<div id="tracks">
+				<h1>Track Listing</h1>
+			</div>
+		</div>				
 	</body>
 </html>
