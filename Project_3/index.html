@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title>Grateful Music</title>
+
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		 <script src="js/jquery-2.0.3.min.js"></script>
+		 <script src="js/handlebars-v1.3.0.js"></script>
+        <script src="js/main.js"></script>
+	</head>
+	<body>
+		
+			<div id="title">
+				<h1>Grateful Music</h1>
+				<image src="images/music.jpg" />
+			</div>
+			<div id="nav">
+				<ul id="pages">
+					<li class="main" id="genre">Genres</li>
+						<ul class="sub" id="genres">
+							<li class="minor">80s</li>
+						</ul>
+					<li class="main" id="artist">Artists</li>
+						<ul class="sub" id="artists">
+							<li class="minor">Phil Collins</li>
+						</ul>
+					<li class="main" id="album">Albums</li>
+						<ul class="sub" id="albums">
+							<li class="minor">...Hits</li>
+						</ul>
+				</ul>
+			</div>
+		<div id="container">
+			<div id="content">
+				<p>This is where the albums and genres and artist content and information will load</p>
+
+			<script id="albumInfo" type="text/x-handlebars-template">
+			<div>
+				<div class="albumTitle">{{title}}</div>
+				<div class="albumArtist">{{artist}}</div>
+				<div class="albumDate">{{date}}</div>
+			</div>
+		</script>
+			</div>
+			
+			<div id="player">
+				<h1>Play that funky music</h1>
+				<audio preload="auto" tabindex="0" autoplay="true" loop="true">
+			
+				</audio>
+			</div>
+
+			<div id="tracks">
+				<h1>Track Listing</h1>
+			</div>
+		</div>				
+	</body>
+</html>
