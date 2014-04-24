@@ -3,32 +3,15 @@
 		<title>Grateful Music</title>
 
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
-<<<<<<< HEAD
 		<link type="text/css" href="skin/blue.monday/jplayer.blue.monday.css" rel="stylesheet" />
-		<script src="js/jquery-2.0.3.min.js"></script>
-        <script src="js/main.js"></script>
-        <script type="text/javascript" src="/js/jquery.jplayer.min.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function(){
-      $("#jquery_jplayer_1").jPlayer({
-        ready: function () {
-          $(this).jPlayer("setMedia", {
-            title: "Bubble",
-            m4a: "http://www.jplayer.org/audio/m4a/Miaow-07-Bubble.m4a",
-            oga: "http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
-          });
-        },
-        swfPath: "/js",
-        supplied: "m4a, oga"
-      });
-    });
-  </script>
-=======
-		 <script src="js/jquery.min.js"></script>
-        <script src="js/main.js"></script>
->>>>>>> f1972480a54f020eba5f85a84dc08f00557855bf
+		<script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script> 
+    <script type="text/javascript" src="js/handlebars-v1.3.0.js"></script>
+    <script type="text/javascript" src="js/underscore-min.js"></script>   
+        
 	</head>
 	<body>
+
 			<div id="title">
 				<h1>Grateful Music</h1>
 			</div>
@@ -37,10 +20,8 @@
 					<li class="main" id="genre">Genres</li>
 						<ul class="sub" id="genres">
 							<li class="minor">80s</li>
-<<<<<<< HEAD
-=======
+
 							<li class="minor">90s</li>
->>>>>>> f1972480a54f020eba5f85a84dc08f00557855bf
 						</ul>
 					<li class="main" id="artist">Artists</li>
 						<ul class="sub" id="artists">
@@ -52,79 +33,116 @@
 						</ul>
 				</ul>
 			</div>
-
-<<<<<<< HEAD
-			<div id="content">
-				<p>This is where the albums and genres and artist content and information will load</p>
-			</div>
-			
-			<div id="player">
-				<h1>Play that funky music</h1>
-				 <div id="jquery_jplayer_1" class="jp-jplayer"></div>
-  <div id="jp_container_1" class="jp-audio">
-    <div class="jp-type-single">
-      <div class="jp-gui jp-interface">
-        <ul class="jp-controls">
-          <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
-          <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
-          <li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
-          <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
-          <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
-          <li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
-        </ul>
-        <div class="jp-progress">
-          <div class="jp-seek-bar">
-            <div class="jp-play-bar"></div>
-          </div>
-        </div>
-        <div class="jp-volume-bar">
-          <div class="jp-volume-bar-value"></div>
-        </div>
-        <div class="jp-time-holder">
-          <div class="jp-current-time"></div>
-          <div class="jp-duration"></div>
-          <ul class="jp-toggles">
-            <li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li>
-            <li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="jp-details">
-        <ul>
-          <li><span class="jp-title">Bubble</span</li>
-        </ul>
-      </div>
-      <div class="jp-no-solution">
-        <span>Update Required</span>
-        To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
-      </div>
-    </div>
-  </div>
-=======
-			
-			<div class="content_wrapper">
-			<div id="player">
-				<h1>Play that funky music</h1>
->>>>>>> f1972480a54f020eba5f85a84dc08f00557855bf
-				<audio preload="auto" tabindex="0" autoplay="true" loop="true">
-			
-				</audio>
-			</div>
-
-<<<<<<< HEAD
-			<div id="tracks">
-				<h1>Track Listing</h1>
-			</div>
-=======
-			<div id="content">
-				<p>This is where the albums and genres and artist content and information will load</p>
-			</div>
-
-			<div id="tracks">
-				<h1>Track Listing</h1>
-			</div>
+    <div class="content_wrapper">
+			<div id="browse"></div>
+      <div id="genre"></div>
+      <div id="info"></div>
 		</div>
->>>>>>> f1972480a54f020eba5f85a84dc08f00557855bf
+
+    <!-- home page list of albums template -->
+    <script id="albumHomeLinks" type="text/x-handlebars-template">
+      <ul class="album_list">
+      {{#each albums}}
+        <li class="albumLink" data-id="{{this.id}}">
+          {{this.title}}&nbsp
+          {{this.artist}}
+        </li>
+      {{/each}} 
+      </ul>
+    </script>
+
+    <!-- book info template -->
+    <script id="albumInfo" type="text/x-handlebars-template">
+      <div>
+        <div class="image">{{image}}</div>
+        <div class="albumTitle">{{title}}</div>
+        <div class="artist">{{artist}}</div>
+        <div class="releaseDate">{{year}}</div>
+        <div class="genre">{{genre}}</div>
+        <div class="artistDescription">{{description}}</div>
+      </div>
+    </script>
+
+    <!-- page script -->
+    <script>
+    var albums;
+
+      $(document).ready(function(){
+
+        //cached DOM references
+        var infoDiv = $("#browse");
+        var browseDiv = $("#info");
+        var genreDiv = $("#genres");
+
+
+        //templates
+        
+        var albumLinkTemplate = Handlebars.compile($("#albumHomeLinks").html());
+        var hompageTemplate = Handlebars.compile($("#albumInfo").html());
+        //var bookInfoTemplate = Handlebars.compile($("#bookInfo").html());
+        var genreLinkTemplate = Handlebars.compile($("#genreLinks").html());
+      
+        $.getJSON('json/data.json', function(data) {
+          albums = data.albums;
+          $("#content").append(albumLinkTemplate(data));
+          genreDiv.html(genreLinkTemplate(data.genres));
+        })
+        
+
+        //Run this function whenever a element with class 'bookLink' is clicked if its in the content div, works for any now or in the future
+        $("#content").on("click", ".bookLink", function() {
+          console.log(books[$(this).data('id')]);
+
+
+          //get the data
+          var bookInfo = _.findWhere(books, {id: $(this).data('id') });
+          //generate html
+          infoDiv.html(bookInfoTemplate( bookInfo ) );
+        })
+
+        $("#content").on("click", ".genreLink", function() {
+          var genreToFind = $(this).html();
+          var results = {};
+
+          results.books = _.where(books, { genre: genreToFind });
+
+          browseDiv.html(bookLinkTemplate(results));
+        })
+
+        $("#btnSearch").click(function() {
+          //get the search term
+          var searchTerm = $("#txtSearch").val();
+          //object to store any results
+          var results = {
+            books: []
+          }
+
+          //loop through all of our books
+          results.books = _.filter(books, function(item) {
+            //return (item.title.indexOf(searchTerm) != -1);
+            var titleSplit = item.title.split(" ");
+            return _.find(titleSplit, function(titleWord){
+              return titleWord.toUpperCase() == searchTerm.toUpperCase();
+            })
+          })
+          /*for(var i = 0; i < books.length; i++) {
+            //split the book's name into individual words
+            var titleSplit = books[i].title.split(" ");
+
+            //loop through those words
+            for(var y = 0; y < titleSplit.length; y++) {
+              if(titleSplit[y].toUpperCase() == searchTerm.toUpperCase()) {
+                results.books.push(books[i]);
+                break;
+              }
+            }
+          }*/
+
+          browseDiv.html(bookLinkTemplate(results));
+
+        })
+      })
+    </script>
 						
 	</body>
 </html>
